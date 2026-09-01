@@ -1,5 +1,4 @@
-import { Poppins, Montserrat } from "next/font/google";
-// @ts-ignore
+﻿// @ts-ignore
 import "./globals.css";
 
 import LayoutWrapper from "@/components/LayoutWrapper";
@@ -7,18 +6,6 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
-
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
-  variable: "--font-poppins",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: ['300', '400', '500', '700'],
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   metadataBase: new URL(defaultUrl), 
@@ -70,7 +57,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${poppins.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-sans antialiased min-h-screen flex flex-col" style={{ fontFamily: "'Poppins', system-ui, sans-serif" }}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
