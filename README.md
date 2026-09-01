@@ -332,3 +332,5 @@ Jurusan Teknik Kimia - Politeknik Negeri Sriwijaya
 ## 📝 Lisensi
 
 © 2024-2026 Jurusan Teknik Kimia Politeknik Negeri Sriwijaya. All Rights Reserved.
+#   T e k k i m S o l v e d  
+ 
